@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (strong, nonatomic) NSArray* stateList;
+@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 
 @end
 
