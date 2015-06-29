@@ -80,7 +80,7 @@
              {
                  if ([item[@"Placename"] isEqualToString:self.city] && [item[@"StatePostal"] isEqualToString:self.state])
                  {
-                     self.response = item[@"Pop"];
+                     self.response = item[self.searchType];
                      self.hasCompletedResponse = YES;
                      [self connectionDidFinishLoading];
                  }

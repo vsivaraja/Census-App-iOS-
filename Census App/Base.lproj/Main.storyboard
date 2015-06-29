@@ -27,27 +27,6 @@
                                     <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hg2-io-sCB"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-oJ-RGr">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                            </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-fc-5gp">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="8cz-oo-5eZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8cz-oo-5eZ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="8cz-oo-5eZ"/>
-                                    </mask>
-                                </variation>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the city and state!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3w-oM-ttd">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -98,6 +77,36 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-oJ-RGr">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWf-fc-5gp">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="8cz-oo-5eZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8cz-oo-5eZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="8cz-oo-5eZ"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eu-WU-r18">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Tap here to find the population density!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="popDen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WaC-V5-SEL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -111,6 +120,7 @@
                             <constraint firstAttribute="centerX" secondItem="qWf-fc-5gp" secondAttribute="centerX" id="Ljx-LL-eEG"/>
                             <constraint firstAttribute="centerX" secondItem="coJ-oJ-RGr" secondAttribute="centerX" id="N91-Rm-BoY"/>
                             <constraint firstItem="qgt-tc-D4y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="351" id="Pcq-mV-RiD"/>
+                            <constraint firstAttribute="centerX" secondItem="2eu-WU-r18" secondAttribute="centerX" id="Qq2-0B-5ze"/>
                             <constraint firstItem="qgt-tc-D4y" firstAttribute="top" secondItem="coJ-oJ-RGr" secondAttribute="bottom" constant="9" id="UeN-XK-OVC"/>
                             <constraint firstItem="v3w-oM-ttd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="148" id="VQQ-7K-lEn"/>
                             <constraint firstAttribute="centerX" secondItem="v3w-oM-ttd" secondAttribute="centerX" id="bQ1-Up-xpF"/>
@@ -124,13 +134,15 @@
                             <constraint firstItem="qWf-fc-5gp" firstAttribute="top" secondItem="v3w-oM-ttd" secondAttribute="bottom" constant="37" id="tf3-rO-SgI">
                                 <variation key="heightClass=regular" constant="35"/>
                             </constraint>
+                            <constraint firstItem="2eu-WU-r18" firstAttribute="top" secondItem="qgt-tc-D4y" secondAttribute="bottom" constant="22" id="v94-Gr-hTt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qgt-tc-D4y"/>
+                                <exclude reference="v3w-oM-ttd"/>
                                 <exclude reference="coJ-oJ-RGr"/>
                                 <exclude reference="qWf-fc-5gp"/>
-                                <exclude reference="v3w-oM-ttd"/>
+                                <exclude reference="2eu-WU-r18"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="K1Z-qG-7G7"/>
@@ -152,14 +164,17 @@
                                 <exclude reference="Pcq-mV-RiD"/>
                                 <exclude reference="UeN-XK-OVC"/>
                                 <exclude reference="lT0-gR-VVa"/>
+                                <exclude reference="Qq2-0B-5ze"/>
+                                <exclude reference="v94-Gr-hTt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="qgt-tc-D4y"/>
+                                <include reference="v3w-oM-ttd"/>
                                 <include reference="coJ-oJ-RGr"/>
                                 <include reference="qWf-fc-5gp"/>
-                                <include reference="v3w-oM-ttd"/>
+                                <include reference="2eu-WU-r18"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="K1Z-qG-7G7"/>
@@ -174,6 +189,8 @@
                                 <include reference="FHL-sz-Bp3"/>
                                 <include reference="Pcq-mV-RiD"/>
                                 <include reference="lT0-gR-VVa"/>
+                                <include reference="Qq2-0B-5ze"/>
+                                <include reference="v94-Gr-hTt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -194,6 +211,7 @@
                         <outlet property="cityText" destination="qWf-fc-5gp" id="yeI-A8-wPL"/>
                         <outlet property="dataLabel" destination="v3w-oM-ttd" id="fUe-le-cCt"/>
                         <outlet property="popButton" destination="qgt-tc-D4y" id="Lfn-2c-fGs"/>
+                        <outlet property="popDenButton" destination="2eu-WU-r18" id="pUx-nc-K0R"/>
                         <outlet property="stateSpinner" destination="coJ-oJ-RGr" id="lcy-vs-GvI"/>
                     </connections>
                 </viewController>

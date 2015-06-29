@@ -15,6 +15,8 @@
 @property (strong, nonatomic) NSString *stateText;
 @property (strong, nonatomic) censusCaller *caller;
 @property (strong, nonatomic) IBOutlet UITextField *cityText;
+@property (strong, nonatomic) IBOutlet UIButton *popDenButton;
+- (IBAction)popDen:(id)sender;
 
 @end
 
@@ -91,8 +93,13 @@
 - (IBAction)buttonTap:(id)sender
 {
     self.caller = nil;
-    self.caller = [[censusCaller alloc] initWithParams:self.cityText.text state:self.stateText searchType:@"hi"];
+    self.caller = [[censusCaller alloc] initWithParams:self.cityText.text state:self.stateText searchType:@"Pop"];
     [self.caller APICall];
 }
 
+- (IBAction)popDen:(id)sender {
+    self.caller = nil;
+    self.caller = [[censusCaller alloc] initWithParams:self.cityText.text state:self.stateText searchType:@"PopSqMi"];
+    [self. caller APICall];
+}
 @end
